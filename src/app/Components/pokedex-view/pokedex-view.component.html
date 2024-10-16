@@ -1,0 +1,24 @@
+<div class="pokedex">
+    <div class="top-section">
+        <div class="pokeball"></div>
+        <div class="title">
+            <h1>POKEDEX</h1>
+        </div>
+        <div class="line"></div>
+    </div>
+    <div class="content">
+      <div class="image-container">
+          <img [src]="pokemonImageUrl" alt="Pokémon" />
+      </div>
+      <div class="stats-container">
+          <app-graficos></app-graficos>
+      </div> 
+  </div>
+    <div class="bottom-section">
+        <div class="search-container">
+            <input type="text" id="pokemon-input" placeholder="Ingresa el número del Pokémon..." #pokemonInput />
+            <button (click)="searchPokemon(pokemonInput.value)">Buscar</button>
+        </div>
+    </div>
+  </div>
+  

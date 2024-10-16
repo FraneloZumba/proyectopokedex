@@ -1,0 +1,65 @@
+.stats-container {
+    background-color: #8bc34a;
+    padding: 20px;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 10px;
+    flex: 1;
+    align-content: flex-start;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stat-bar {
+    width: 60%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+    border: 1px solid #000;
+}
+
+.stat-bar div {
+    height: 100%;
+}
+
+.hp-bar {
+    background-color: #00bcd4;
+    width: 30%;
+}
+
+.attack-bar {
+    background-color: #f44336;
+    width: 56%;
+}
+
+.defense-bar {
+    background-color: #ff9800;
+    width: 5%;
+}
+
+.speed-bar {
+    background-color: #00bcd4;
+    width: 47%;
+}
+
+.sp-attack-bar {
+    background-color: #00bcd4;
+    width: 5%;
+}
+
+.sp-defense-bar {
+    background-color: #ff9800;
+    width: 10%;
+}
+
+.total-bar {
+    background-color: #ffeb3b;
+    width: 72%;
+}

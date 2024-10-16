@@ -1,0 +1,51 @@
+<div class="stats-container">
+    <div class="stat">
+        <span>HP:</span>
+        <span>{{ currentStats.hp }} / {{ maxStats.hp }}</span>
+        <div class="stat-bar">
+            <div class="hp-bar" [style.width.%]="getStatPercentage('hp')"></div>
+        </div>
+    </div>
+    <div class="stat">
+        <span>Attack:</span>
+        <span>{{ currentStats.attack }} / {{ maxStats.attack }}</span>
+        <div class="stat-bar">
+            <div class="attack-bar" [style.width.%]="getStatPercentage('attack')"></div>
+        </div>
+    </div>
+    <div class="stat">
+        <span>Defense:</span>
+        <span>{{ currentStats.defense }} / {{ maxStats.defense }}</span>
+        <div class="stat-bar">
+            <div class="defense-bar" [style.width.%]="getStatPercentage('defense')"></div>
+        </div>
+    </div>
+    <div class="stat">
+        <span>Speed:</span>
+        <span>{{ currentStats.speed }} / {{ maxStats.speed }}</span>
+        <div class="stat-bar">
+            <div class="speed-bar" [style.width.%]="getStatPercentage('speed')"></div>
+        </div>
+    </div>
+    <div class="stat">
+        <span>SP Attack:</span>
+        <span>{{ currentStats.spAttack }} / {{ maxStats.spAttack }}</span>
+        <div class="stat-bar">
+            <div class="sp-attack-bar" [style.width.%]="getStatPercentage('spAttack')"></div>
+        </div>
+    </div>
+    <div class="stat">
+        <span>SP Defense:</span>
+        <span>{{ currentStats.spDefense }} / {{ maxStats.spDefense }}</span>
+        <div class="stat-bar">
+            <div class="sp-defense-bar" [style.width.%]="getStatPercentage('spDefense')"></div>
+        </div>
+    </div>
+    <div class="stat">
+        <span>Total:</span>
+        <span>{{ currentStats.hp + currentStats.attack + currentStats.defense + currentStats.speed + currentStats.spAttack + currentStats.spDefense }} / 600</span>
+        <div class="stat-bar">
+            <div class="total-bar" [style.width.%]="((currentStats.hp + currentStats.attack + currentStats.defense + currentStats.speed + currentStats.spAttack + currentStats.spDefense) / 600) * 100"></div>
+        </div>
+    </div>
+</div>
