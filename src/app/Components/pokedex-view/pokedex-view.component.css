@@ -6,15 +6,17 @@ body {
 
 .pokedex {
     width: 800px;
-    height: auto; /* Cambiar de fixed height a auto para que se ajuste al contenido */
-    border: 2px solid #000;
-    border-radius: 20px; 
+    height: auto;
+    /* Cambiar de fixed height a auto para que se ajuste al contenido */
+    border: 6px solid #000;
+    border-radius: 20px;
     margin: 50px auto;
-    background: rgb(88,0,7);
-    background: linear-gradient(90deg, rgba(88,0,7,1) 0%, rgba(230,0,18,1) 20%, rgba(216,0,17,1) 81%, rgba(88,0,7,1) 100%); 
+    background: rgb(47,31,18);
+    background: linear-gradient(90deg, rgba(47,31,18,1) 0%, rgba(59,37,26,1) 50%, rgba(47,31,18,1) 100%); 
     position: relative;
     display: flex;
-    flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
+    flex-direction: column;
+    /* Asegura que los elementos internos se apilen verticalmente */
 }
 
 .top-section {
@@ -52,13 +54,15 @@ body {
     top: 80px;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 6px;
     background-color: #000;
 }
 
 .main-screen {
-    display: flex; /* Cambia la disposición a flexbox */
-    flex-direction: row; /* Coloca los elementos en fila */
+    display: flex;
+    /* Cambia la disposición a flexbox */
+    flex-direction: row;
+    /* Coloca los elementos en fila */
     width: 90%;
     height: 257px;
     background-color: #FFF;
@@ -68,13 +72,16 @@ body {
     margin-top: 5px;
     margin-bottom: 22px;
     align-items: center;
-    justify-content: space-around; /* Espacio entre los elementos */
+    justify-content: space-around;
+    /* Espacio entre los elementos */
 }
+
 .poke {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Ajusta el tamaño relativo */
+    flex: 1;
+    /* Ajusta el tamaño relativo */
 }
 
 .bottom-section {
@@ -82,9 +89,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #333;
-    border-top: 2px solid #000;
+    border-top: 6px solid #000;
     border-radius: 0 0 20px 20px;
-    padding: 10px 0; /* Espaciado vertical dentro de la sección */
+    padding: 10px 0;
+    /* Espaciado vertical dentro de la sección */
 }
 
 .bottom-section .info-bar span {
@@ -95,7 +103,8 @@ body {
 .bottom-section .buttons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espacio entre los botones */
+    gap: 20px;
+    /* Espacio entre los botones */
 }
 
 .bottom-section .buttons .button {
@@ -112,11 +121,13 @@ body {
     width: 100%;
     height: 100%;
     padding: 5px;
-    margin-bottom: 20px; /* Añadir un margen para separar la sección de botones */
+    margin-bottom: 20px;
+    /* Añadir un margen para separar la sección de botones */
 }
 
 .image-container {
-    background-color: #fff;
+    position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+    background-color: #000000;
     padding: 20px;
     text-align: center;
     border: 2px solid #000;
@@ -124,18 +135,50 @@ body {
     margin: 10px;
     width: auto;
     height: 270px;
-    display: flex; /* Añade esto */
-    justify-content: center; /* Añade esto */
-    align-items: center; /* Añade esto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-id {
+    position: absolute; /* Coloca el ID en una posición absoluta */
+    top: 10px; /* Ajusta según sea necesario */
+    left: 10px; /* Ajusta según sea necesario */
+    color: white; /* Cambia el color según tu preferencia */
+    font-size: 24px; /* Cambia el tamaño de la fuente según tu preferencia */
+    font-weight: bold; /* Negrita */
+}
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /* Cambia este valor para ajustar la altura de la flotación */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .image-container img {
-    max-width: 100%; /* Asegúrate de que la imagen no exceda el contenedor */
-    max-height: 100%; /* Asegúrate de que la imagen no exceda el contenedor */
+    width: 200px; /* Cambia este valor según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    animation: float 3s ease-in-out infinite; /* Aplica la animación */
 }
 
+
+
 .stats-container {
-    background-color: #8bc34a;
+    background: rgb(144,67,30);
+    background: radial-gradient(circle, rgba(144,67,30,1) 0%, rgba(194,93,45,1) 50%, rgba(144,67,30,1) 100%); 
     padding: 20px;
     color: #000;
     border: 2px solid #000;
@@ -150,11 +193,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 14px;
 }
 
 .bottom-section .search-container input {
-    width: 200px; /* Ajusta el tamaño según lo necesites */
+    width: 200px;
+    /* Ajusta el tamaño según lo necesites */
     padding: 8px;
     border: 2px solid #000;
     border-radius: 5px;
@@ -168,4 +211,52 @@ body {
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
+    margin-right: 10px;
+}
+
+.codepen-button {
+    display: block;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 3px;
+    isolation: isolate;
+}
+
+.codepen-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+    background-size: 25% 100%;
+    animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out;
+}
+
+.codepen-button:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+}
+
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+    to {
+        transform: translateX(-25%);
+    }
+}
+
+.codepen-button span {
+    position: relative;
+    border-radius: 3px;
+    height: 100%;
 }
